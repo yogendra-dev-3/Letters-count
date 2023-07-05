@@ -1,53 +1,140 @@
 /* Write your code here. */
-
-.container {
-  background-image: linear-gradient(to right, #1d976c, #93f9b9);
-  background-size: cover;
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #1d976c 0%, #93f9b9 107%);
   height: 100vh;
 }
 
-.img-letters-container {
+.letters-calculator-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 90%;
 }
 
-.image {
-  height: 300px;
+@media screen and (min-width: 992px) {
+  .letters-calculator-container {
+    flex-direction: row;
+  }
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .calculator-container {
+    align-items: flex-start;
+    order: 0;
+  }
 }
 
 .heading {
-  color: white;
+  text-align: center;
+  color: #ffffff;
   font-family: 'Roboto';
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.text {
-  color: white;
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 46px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heading {
+    text-align: start;
+    font-size: 46px;
+  }
+}
+
+.input-phrase-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #ffffff;
   font-family: 'Roboto';
   font-size: 12px;
-}
-
-.input {
-  margin-top: 5px;
-  width: 300px;
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 7px;
-  border: 1px solid white;
-  background-color: transparent;
-}
-
-.button {
-  background-color: white;
-  padding: 10px;
   font-weight: bold;
-  font-size: 20px;
-  color: #1d976c;
-  border-radius: 5px;
-  margin-top: 15px;
-  border: none;
-  width: 180px;
+}
+
+.letters-input {
+  color: #ffffff;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #e4e7eb;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .letters-input {
+    width: 350px;
+  }
+}
+
+.letters-count {
+  align-self: center;
+  color: #219a6f;
+  background-color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-top: 32px;
+  padding: 18px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .letters-count {
+    align-self: start;
+    padding: 24px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .letters-count {
+    padding: 30px;
+    padding-right: 38px;
+    padding-left: 38px;
+  }
+}
+
+.letters-calculator-image {
+  width: 100%;
+  order: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .letters-calculator-image {
+    width: 550px;
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .letters-calculator-image {
+    width: 700px;
+  }
 }
